@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widgets xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:helloworld:Magento_Widget:etc/widget.xsd">
+  <widget class="Emakina\MageCraft\Block\Widget\Popin" id="emakina_popin">
+    <label>Popin CMS</label>
+    <description translate="true">Add Popin with a CMS Block</description>
+    <parameters>
+      <parameter name="id" xsi:type="text" visible="true" required="true" sort_order="30">
+        <label translate="true">Block ID</label>
+        <description translate="true">Name of the block that should appear</description>
+      </parameter>
+      <parameter name="label" xsi:type="text" visible="true" sort_order="40" required="true">
+        <label translate="true">CTA Label</label>
+        <description translate="true">Name of the CTA</description>
+      </parameter>
+    </parameters>
+  </widget>
+  <widget class="Emakina\MageCraft\Block\Widget\Icons" id="emakina_icon">
+    <label>Icon</label>
+    <description translate="true">Add icon with or without a link</description>
+    <parameters>
+      <parameter name="icon" xsi:type="select" visible="true" required="true" sort_order="20">
+        <label translate="true">Icon Name</label>
+        <options>
+
+        </options>
+      </parameter>
+      <parameter name="custom" xsi:type="text" visible="true" sort_order="30">
+        <label translate="true">Custom Icon name</label>
+        <description translate="true">Name of the class added to display the icon. If provided, override the icon previously selected..</description>
+      </parameter>
+      <parameter name="link" xsi:type="text" visible="true" sort_order="40">
+        <label translate="true">Link</label>
+        <description translate="true">Make the icon clickable to the absolute url provided</description>
+      </parameter>
+    </parameters>
+  </widget>
+</widgets>

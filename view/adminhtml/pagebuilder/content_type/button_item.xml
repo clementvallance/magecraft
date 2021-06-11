@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_types.xsd">
+    <type name="button-item">
+        <appearances>
+            <appearance default="true"
+                        name="default"
+                        preview_template="Emakina_MageCraft/content-type/button-item/default/preview"
+                        master_template="Emakina_MageCraft/content-type/button-item/default/master">
+                <elements>
+                    <element name="link_icon">
+                        <css name="button_icon"/>
+                    </element>
+                </elements>
+            </appearance>
+        </appearances>
+    </type>
+</config>

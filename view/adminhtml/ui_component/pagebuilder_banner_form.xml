@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+    <argument name="data" xsi:type="array">
+        <item name="js_config" xsi:type="array">
+            <item name="provider" xsi:type="string">
+                pagebuilder_banner_form.pagebuilder_banner_form_data_source
+            </item>
+        </item>
+        <item name="label" xsi:type="string" translate="true">Banner</item>
+    </argument>
+    <settings>
+        <deps>
+            <dep>pagebuilder_banner_form.pagebuilder_banner_form_data_source</dep>
+        </deps>
+        <namespace>pagebuilder_banner_form</namespace>
+    </settings>
+    <dataSource name="pagebuilder_banner_form_data_source">
+        <argument name="data" xsi:type="array">
+            <item name="js_config" xsi:type="array">
+                <item name="component" xsi:type="string">Magento_PageBuilder/js/form/provider</item>
+            </item>
+        </argument>
+        <dataProvider name="pagebuilder_banner_form_data_source"
+                      class="Magento\PageBuilder\Model\ContentType\DataProvider">
+            <settings>
+                <requestFieldName/>
+                <primaryFieldName/>
+            </settings>
+        </dataProvider>
+    </dataSource>
+
+    <fieldset name="contents"
+              sortOrder="30"
+              component="Magento_PageBuilder/js/form/element/dependent-fieldset">
+
+        <urlInput name="second_link_url" sortOrder="21" template="Magento_PageBuilder/form/element/url-input">
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Second link</label>
+                <dataScope>second_link_url</dataScope>
+                <urlTypes class="Magento\Ui\Model\UrlInput\LinksConfigProvider"/>
+                <validation>
+                    <rule name="validate-message-no-link" xsi:type="boolean">true</rule>
+                </validation>
+                <imports>
+                    <link name="validation.validate-message-no-link">${$.parentName}.message:value</link>
+                </imports>
+            </settings>
+        </urlInput>
+
+        <field name="second_button_text" sortOrder="61" formElement="input">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="disabledValues" xsi:type="array">
+                        <item name="none" xsi:type="string">never</item>
+                    </item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Second button Text</label>
+                <dataType>text</dataType>
+                <dataScope>second_button_text</dataScope>
+                <imports>
+                    <link name="setDisabled">ns = ${ $.ns }, index = show_button:value</link>
+                </imports>
+            </settings>
+        </field>
+
+        <field name="second_button_type" sortOrder="62" formElement="select">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="default" xsi:type="string">pagebuilder-button-primary</item>
+                    <item name="disabledValues" xsi:type="array">
+                        <item name="none" xsi:type="string">never</item>
+                    </item>
+                </item>
+            </argument>
+            <settings>
+                <dataType>text</dataType>
+                <label translate="true">Second button Type</label>
+                <imports>
+                    <link name="setDisabled">ns = ${ $.ns }, index = show_button:value</link>
+                </imports>
+            </settings>
+            <formElements>
+                <select>
+                    <settings>
+                        <options>
+                            <option name="0" xsi:type="array">
+                                <item name="value" xsi:type="string">pagebuilder-button-primary</item>
+                                <item name="label" xsi:type="string" translate="true">Primary</item>
+                            </option>
+                            <option name="1" xsi:type="array">
+                                <item name="value" xsi:type="string">pagebuilder-button-secondary</item>
+                                <item name="label" xsi:type="string" translate="true">Secondary</item>
+                            </option>
+                            <option name="2" xsi:type="array">
+                                <item name="value" xsi:type="string">pagebuilder-button-link</item>
+                                <item name="label" xsi:type="string" translate="true">Link</item>
+                            </option>
+                            <option name="3" xsi:type="array">
+                                <item name="value" xsi:type="string">pagebuilder-button-primary-no-background pagebuilder-button-primary</item>
+                                <item name="label" xsi:type="string" translate="true">Primary no background</item>
+                            </option>
+                            <option name="4" xsi:type="array">
+                                <item name="value" xsi:type="string">pagebuilder-button-secondary-no-background pagebuilder-button-secondary</item>
+                                <item name="label" xsi:type="string" translate="true">Secondary no background</item>
+                            </option>
+                        </options>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+
+        <field name="button_type" formElement="select">
+            <formElements>
+                <select>
+                    <settings>
+                        <options>
+                            <option name="3" xsi:type="array">
+                                <item name="value" xsi:type="string">pagebuilder-button-primary-no-background pagebuilder-button-primary</item>
+                                <item name="label" xsi:type="string" translate="true">Primary no background</item>
+                            </option>
+                            <option name="4" xsi:type="array">
+                                <item name="value" xsi:type="string">pagebuilder-button-secondary-no-background pagebuilder-button-secondary</item>
+                                <item name="label" xsi:type="string" translate="true">Secondary no background</item>
+                            </option>
+                        </options>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+    </fieldset>
+</form>

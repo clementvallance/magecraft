@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_PageBuilder:etc/content_types.xsd">
+    <type name="banner">
+        <appearances>
+            <appearance default="true"
+                        name="poster"
+                        preview_template="Emakina_MageCraft/content-type/banner/poster/preview"
+                        master_template="Emakina_MageCraft/content-type/banner/poster/master"
+                        reader="Magento_PageBuilder/js/master-format/read/configurable">
+                <elements>
+                    <element name="second_link">
+                        <attribute name="second_link_url" reader="Magento_PageBuilder/js/property/link" persistence_mode="read"/>
+                        <attribute name="virtual_link_href" storage_key="second_link_url" source="href" converter="Magento_PageBuilder/js/converter/attribute/link-href" persistence_mode="write"/>
+                        <attribute name="virtual_link_target" storage_key="second_link_url" source="target" converter="Magento_PageBuilder/js/converter/attribute/link-target" persistence_mode="write"/>
+                        <attribute name="virtual_link_type" storage_key="second_link_url" source="data-link-type" converter="Magento_PageBuilder/js/converter/attribute/link-type" persistence_mode="write"/>
+                    </element>
+
+                    <element name="second_button">
+                        <style name="opacity" source="opacity" converter="Magento_PageBuilder/js/content-type/banner/converter/style/button-opacity" persistence_mode="write"/>
+                        <style name="visibility" source="visibility" converter="Magento_PageBuilder/js/content-type/banner/converter/style/button-visibility" persistence_mode="write"/>
+                        <html name="second_button_text" converter="Magento_PageBuilder/js/converter/html/tag-escaper"/>
+                        <css name="second_button_type">
+                            <filter>
+                                <class source="pagebuilder-banner-button"/>
+                            </filter>
+                        </css>
+                    </element>
+                </elements>
+            </appearance>
+            <appearance name="collage-right"
+                        preview_template="Emakina_MageCraft/content-type/banner/collage-right/preview"
+                        master_template="Emakina_MageCraft/content-type/banner/collage-right/master"
+                        reader="Magento_PageBuilder/js/master-format/read/configurable">
+                <elements>
+                    <element name="second_link">
+                        <attribute name="second_link_url" reader="Magento_PageBuilder/js/property/link" persistence_mode="read"/>
+                        <attribute name="virtual_link_href" storage_key="second_link_url" source="href" converter="Magento_PageBuilder/js/converter/attribute/link-href" persistence_mode="write"/>
+                        <attribute name="virtual_link_target" storage_key="second_link_url" source="target" converter="Magento_PageBuilder/js/converter/attribute/link-target" persistence_mode="write"/>
+                        <attribute name="virtual_link_type" storage_key="second_link_url" source="data-link-type" converter="Magento_PageBuilder/js/converter/attribute/link-type" persistence_mode="write"/>
+                    </element>
+
+                    <element name="second_button">
+                        <style name="opacity" source="opacity" converter="Magento_PageBuilder/js/content-type/banner/converter/style/button-opacity" persistence_mode="write"/>
+                        <style name="visibility" source="visibility" converter="Magento_PageBuilder/js/content-type/banner/converter/style/button-visibility" persistence_mode="write"/>
+                        <html name="second_button_text" converter="Magento_PageBuilder/js/converter/html/tag-escaper"/>
+                        <css name="second_button_type">
+                            <filter>
+                                <class source="pagebuilder-banner-button"/>
+                            </filter>
+                        </css>
+                    </element>
+                </elements>
+            </appearance>
+            <appearance name="collage-left"
+                        preview_template="Emakina_MageCraft/content-type/banner/collage-left/preview"
+                        master_template="Emakina_MageCraft/content-type/banner/collage-left/master"
+                        reader="Magento_PageBuilder/js/master-format/read/configurable">
+                <elements>
+                    <element name="second_link">
+                        <attribute name="second_link_url" reader="Magento_PageBuilder/js/property/link" persistence_mode="read"/>
+                        <attribute name="virtual_link_href" storage_key="second_link_url" source="href" converter="Magento_PageBuilder/js/converter/attribute/link-href" persistence_mode="write"/>
+                        <attribute name="virtual_link_target" storage_key="second_link_url" source="target" converter="Magento_PageBuilder/js/converter/attribute/link-target" persistence_mode="write"/>
+                        <attribute name="virtual_link_type" storage_key="second_link_url" source="data-link-type" converter="Magento_PageBuilder/js/converter/attribute/link-type" persistence_mode="write"/>
+                    </element>
+
+                    <element name="second_button">
+                        <style name="opacity" source="opacity" converter="Magento_PageBuilder/js/content-type/banner/converter/style/button-opacity" persistence_mode="write"/>
+                        <style name="visibility" source="visibility" converter="Magento_PageBuilder/js/content-type/banner/converter/style/button-visibility" persistence_mode="write"/>
+                        <html name="second_button_text" converter="Magento_PageBuilder/js/converter/html/tag-escaper"/>
+                        <css name="second_button_type">
+                            <filter>
+                                <class source="pagebuilder-banner-button"/>
+                            </filter>
+                        </css>
+                    </element>
+                </elements>
+            </appearance>
+            <appearance name="collage-centered"
+                        preview_template="Emakina_MageCraft/content-type/banner/collage-centered/preview"
+                        master_template="Emakina_MageCraft/content-type/banner/collage-centered/master"
+                        reader="Magento_PageBuilder/js/master-format/read/configurable">
+                <elements>
+                    <element name="second_link">
+                        <attribute name="second_link_url" reader="Magento_PageBuilder/js/property/link" persistence_mode="read"/>
+                        <attribute name="virtual_link_href" storage_key="second_link_url" source="href" converter="Magento_PageBuilder/js/converter/attribute/link-href" persistence_mode="write"/>
+                        <attribute name="virtual_link_target" storage_key="second_link_url" source="target" converter="Magento_PageBuilder/js/converter/attribute/link-target" persistence_mode="write"/>
+                        <attribute name="virtual_link_type" storage_key="second_link_url" source="data-link-type" converter="Magento_PageBuilder/js/converter/attribute/link-type" persistence_mode="write"/>
+                    </element>
+
+                    <element name="second_button">
+                        <style name="opacity" source="opacity" converter="Magento_PageBuilder/js/content-type/banner/converter/style/button-opacity" persistence_mode="write"/>
+                        <style name="visibility" source="visibility" converter="Magento_PageBuilder/js/content-type/banner/converter/style/button-visibility" persistence_mode="write"/>
+                        <html name="second_button_text" converter="Magento_PageBuilder/js/converter/html/tag-escaper"/>
+                        <css name="second_button_type">
+                            <filter>
+                                <class source="pagebuilder-banner-button"/>
+                            </filter>
+                        </css>
+                    </element>
+                </elements>
+            </appearance>
+        </appearances>
+    </type>
+</config>

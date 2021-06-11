@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<form xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd" extends="pagebuilder_base_form">
+    <fieldset name="content" sortOrder="20">
+        <field name="button_icon" sortOrder="15" formElement="input">
+            <settings>
+                <label translate="true">Button icon</label>
+                <validation>
+                    <rule name="validate-string" xsi:type="boolean">true</rule>
+                </validation>
+            </settings>
+        </field>
+        <field name="button_type" formElement="select">
+            <formElements>
+                <select>
+                    <settings>
+                        <options>
+                            <option name="3" xsi:type="array">
+                                <item name="value" xsi:type="string">pagebuilder-button-primary-no-background pagebuilder-button-primary</item>
+                                <item name="label" xsi:type="string" translate="true">Primary no background</item>
+                            </option>
+                            <option name="4" xsi:type="array">
+                                <item name="value" xsi:type="string">pagebuilder-button-secondary-no-background pagebuilder-button-secondary</item>
+                                <item name="label" xsi:type="string" translate="true">Secondary no background</item>
+                            </option>
+                        </options>
+                    </settings>
+                </select>
+            </formElements>
+        </field>
+    </fieldset>
+</form>

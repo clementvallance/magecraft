@@ -1,0 +1,22 @@
+<?php
+
+use emakinafr\Magecraft\Block\Widget\Popin;
+
+/** @var Popin $block */
+
+
+/** @var string $custom */
+$blockId = $block->getData('id');
+$label = $block->getData('label');
+?>
+
+<?php if ($blockId): ?>
+    <div class="cms-block-popin <?= $blockId; ?>" data-mage-init='{"popin": {"blockId": "<?= $blockId; ?>"}}'>
+        <div class="content">
+            <span class="full_icono_FL210105_close cross close <?= $blockId; ?>"></span>
+            <?= $block->getLayout()->createBlock(\Magento\Cms\Block\Block::class)->setBlockId($blockId)->toHtml();?>
+            <button class="validate close <?= $blockId; ?>"> <?= $label ?> </button>
+        </div>
+    </div>
+    <div class="cms-block-popin-overlay"></div>
+<?php endif; ?>

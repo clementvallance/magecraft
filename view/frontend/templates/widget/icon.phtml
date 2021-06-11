@@ -1,0 +1,22 @@
+<?php
+
+use emakinafr\Icons\Block\Widget\Icons;
+
+/** @var Icons $block */
+
+/** @var string $custom */
+$custom = $block->getData('custom');
+$class = $custom ? $custom : $block->getData('icon');
+$html = '<span class="'. $class .'"></span>';
+
+/** @var string $custom */
+$link = $block->getData('link');
+?>
+
+<?php if ($link): ?>
+    <a class="pagebuilder-icon" href="<?= $link; ?>">
+        <?= $html ?>
+    </a>
+<?php else: ?>
+    <?= $html ?>
+<?php endif; ?>

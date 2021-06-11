@@ -1,0 +1,18 @@
+<div class="pagebuilder-content-type pagebuilder-accordion-item type-nested" attr="Object.assign({}, {id: parent.id}, data.main.attributes())" ko-style="data.main.style()" css="data.main.css()" event="{ mouseover: onMouseOver, mouseout: onMouseOut }, mouseoverBubble: false">
+    <render args="getOptions().template" />
+    <div>
+        <h2 data-bind="liveEdit: { field: 'accordionTitle', placeholder: 'Edit accordion title' }" class="pagebuilder-accordion-item-collapsible" aria-expanded="true"></h2>
+        <div data-role="content">
+            <div if="isWysiwygSupported()" class="inline-wysiwyg" ko-style="data.accordionContent.style" css="data.accordionContent.css" attr="data.accordionContent.attributes" afterRender="initWysiwyg">
+                <div html="data.accordionContent.html" />
+            </div>
+            <div if="isWysiwygSupported()" class="placeholder-text" ifnot="data.accordionContent.html" translate="'Edit accordion content here.'"></div>
+            <div ifnot="isWysiwygSupported()">
+        <textarea class="inline-wysiwyg-textarea"
+                  afterRender="initTextarea"
+                  event="{keyup: onTextareaKeyUp, focus: onTextareaFocus, blur: onTextareaBlur}"
+                  data-bind="attr: { placeholder: $t('Edit accordion content here.') }" />
+            </div>
+        </div>
+    </div>
+</div>
